@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>callum morrison</title>
+
+  <!-- Scripts for style, CSS, etc -->
+  <link rel="stylesheet" href="css/bulma.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-pageloader@0.3.0/dist/css/bulma-pageloader.min.css" />
+  <link rel="stylesheet" href="css/custom.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+  <!-- Gradient background -->
+  <canvas id="granim-canvas"></canvas>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.min.js"></script>
+  <script>
+    var granimInstance = new Granim({
+      element: '#granim-canvas',
+      name: 'granim',
+      opacity: [1, 1],
+      states: {
+        "default-state": {
+          gradients: [
+            ['#020100', '#2F0A28'],
+            ['#00141D', '#272932']
+          ]
+        }
+      }
+    });
+  </script>
+
+  <!-- Scroll Reveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    ScrollReveal({
+      reset: false,
+      scale: 0.95,
+      duration: 1000,
+    });
+
+    function remove_pageloader() {
+      document.getElementById("pageloader").classList.remove("is-active");
+    }
+  </script>
+  <style>
+    html.sr .sr {
+      visibility: hidden;
+    }
+  </style>
+
+  <!-- Needed for Bulma -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, height=device-height" />
+</head>
+
+<div class="pageloader is-active is-fullheight" id="pageloader"></div>
+
+<body class="dark" onload="remove_pageloader()">
+  <section class="sr is-fullheight">
+    <section class="vcentre section">
+      <div class="container">
+        <div class="columns is-mobile">
+          <div class="column is-one-quarter">
+            <!--no subtitle-->
+          </div>
+          <div class="column">
+            <div class="h1 reveal">
+              welcome<span class="accent">...</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns is-mobile">
+          <div class="column has-text-right is-one-quarter">
+            <p class="ghost reveal">callum morrison</p>
+          </div>
+          <div class="column">
+            <p class="points reveal">
+              I'm a
+              <b>design engineer</b>.
+            </p>
+            <p class="points reveal">
+              I have an MEng (Hons) in <b>Integrated Design
+                Engineering</b> from the University of Bath (1st Class).
+            </p>
+            <p class="points reveal">
+              I made an <b>(award winning)</b> weed detection system to reduce
+              pesticide usage.
+            </p>
+            <p class="points reveal">
+              I wrote the software for a printer capable of printing on
+              <b>cylindrical surfaces</b>.
+            </p>
+            <p class="points reveal">
+              I create graphics and photorealistic renders for global
+              businesses.
+            </p>
+            <p class="points reveal">
+              I'm fluent in English, and proficient in
+              <b>Python, MATLAB, Bash, JavaScript, and HTML</b>.
+            </p>
+            <p class="points reveal">
+              In my spare time I like to repair old cars, and occasionally go
+              on crazy adventures.
+            </p>
+          </div>
+        </div>
+        <div>
+          <h3 class="heading">Why</h3>
+        </div>
+      </div>
+    </section>
+
+    <div class="break"></div>
+
+    <section class="section">
+      <div class="container">
+        <div class="columns is-mobile">
+          <div class="column is-one-quarter">
+          </div>
+          <div class="column">
+            <div class="h1 reveal">portfolio<span class="accent">:</span></div>
+          </div>
+        </div>
+
+        <div class="columns is-mobile">
+          <div class="column has-text-right is-one-quarter">
+            <p class="ghost reveal">2020</p>
+          </div>
+          <div class="column">
+            <p class="reveal" style="line-height: 2rem;"><b>Rapid Prototyping Printer for Cylindrical Components</b></p>
+            <div>
+              <br>
+              <h3 class="heading reveal">Why</h3>
+              <p class="reveal">
+                The client develops a large range of dose-adjustable insulin pens for use by individuals with type 1 or
+                type 2 diabetes. These pens contain a dosage number drum, which is visible to the user when selecting a
+                dosage.</p>
+              <br>
+              <img class="reveal" src="media/pen.png">
+              <p class="reveal">
+                For user trials, number sheets are printed and adhered manually to the drum, repeating for tens of
+                prototypes. This is labour intensive, and resultantly expensive.
+              </p>
+            </div>
+            <div>
+              <br>
+              <h3 class="heading reveal">What</h3>
+              <p class="reveal">
+                Working in a team of six, we developed </p>
+              <br>
+              <img class="reveal" src="media/sketch.svg">
+              <p class="reveal">
+                For user trials, number sheets are printed and adhered manually to the drum, repeating for tens of
+                prototypes. This is labour intensive, and resultantly expensive.
+              </p>
+            </div>
+          </div>
+
+
+        </div>
+    </section>
+
+    <div class="break"></div>
+
+    <script>
+      ScrollReveal().reveal(".reveal", {
+        interval: 300,
+        delay: 100,
+      });
+    </script>
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  color: white;
+}
+
+a {
+  color: #11c8d1;
+}
+
+b {
+  color: #11c8d1;
+}
+
+.accent {
+  color: #11c8d1 !important;
+  text-shadow: -2px 0px 0px hotpink;
+}
+
+.h1 {
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: "Playfair Display", serif;
+}
+
+.ghost {
+  color: #949494;
+}
+
+.pageloader {
+  background-color: #17171c;
+}
+
+
+#granim-canvas {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* body {
+  background-color: #0e0e11;
+  height: 100%;
+} */
+
+html {
+  min-height: 100%;
+}
+
+.break {
+  height: 48vh;
+}
+
+p.points {
+  line-height: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.vcentre {
+  position: relative;
+  top: 45vh;
+  -ms-transform: translateY(-45%);
+  transform: translateY(-45%);
+}
+
+.is-fullheight {
+  height: 100vh;
+}

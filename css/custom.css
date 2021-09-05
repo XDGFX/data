@@ -8,8 +8,13 @@ a {
   color: #11c8d1;
 }
 
-b {
+/* b {
   color: #11c8d1;
+} */
+
+/* Scroll Reveal */
+html.sr .sr {
+  visibility: hidden;
 }
 
 .accent {
@@ -24,6 +29,10 @@ b {
   font-family: "Playfair Display", serif;
 }
 
+.heading {
+  color: white;
+}
+
 .ghost {
   color: #949494;
 }
@@ -31,7 +40,6 @@ b {
 .pageloader {
   background-color: #17171c;
 }
-
 
 #granim-canvas {
   width: 100%;
@@ -56,7 +64,7 @@ html {
 }
 
 .break {
-  height: 48vh;
+  height: 24vh;
 }
 
 p.points {
@@ -65,12 +73,73 @@ p.points {
 }
 
 .vcentre {
-  position: relative;
+  /* position: relative;
   top: 45vh;
   -ms-transform: translateY(-45%);
-  transform: translateY(-45%);
+  transform: translateY(-45%); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: calc(100vh - 6rem);
+}
+
+.video-overlay-link {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 12;
+}
+
+.video-overlay-text {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 11;
+}
+
+.video-overlay-text p {
+  font-size: x-large;
+  text-transform: uppercase;
+}
+
+.video-overlay {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAHklEQVQImWNgYGBIY2BgmAnFaQxQxn8onolVAEULAFEBCl2XWpX6AAAAAElFTkSuQmCC)
+    repeat;
+  z-index: 10;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.video-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+video {
+  max-width: unset;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+  padding: 2rem 0rem;
+  position: sticky;
+  top: 3rem;
+}
+
+.pop-up-element {
+  position: relative;
+  top: -6rem;
 }
 
 .is-fullheight {
-  height: 100vh;
+  min-height: 100vh;
 }

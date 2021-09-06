@@ -121,6 +121,7 @@ p.points {
   align-items: center;
   min-height: 100%;
   min-width: 100%;
+  overflow: clip;
 }
 
 video {

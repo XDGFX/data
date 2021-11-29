@@ -136,6 +136,13 @@ video {
   top: 3rem;
 }
 
+.logo-mobile {
+  width: 200px;
+  height: auto;
+  padding: 2rem 0rem;
+  top: 3rem;
+}
+
 .pop-up-element {
   position: relative;
   top: -6rem;

@@ -1,518 +1,610 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>callum morrison</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <title>callum morrison</title>
+        <!-- Scripts for style, CSS, etc -->
+        <link rel="stylesheet" href="css/bulma.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma-pageloader@0.3.0/dist/css/bulma-pageloader.min.css"
+        />
+        <link rel="stylesheet" href="css/custom.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+            rel="stylesheet"
+        />
+        <script
+            defer
+            src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+        ></script>
 
-  <!-- Scripts for style, CSS, etc -->
-  <link rel="stylesheet" href="css/bulma.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-pageloader@0.3.0/dist/css/bulma-pageloader.min.css" />
-  <link rel="stylesheet" href="css/custom.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
-  <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+        <!-- Gradient background -->
+        <canvas id="granim-canvas"></canvas>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.min.js"></script>
+        <script>
+            var granimInstance = new Granim({
+                element: "#granim-canvas",
+                name: "granim",
+                opacity: [1, 1],
+                states: {
+                    "default-state": {
+                        gradients: [
+                            ["#020100", "#2F0A28"],
+                            ["#00141D", "#272932"],
+                        ],
+                    },
+                },
+            });
+        </script>
 
-  <!-- Gradient background -->
-  <canvas id="granim-canvas"></canvas>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.min.js"></script>
-  <script>
-    var granimInstance = new Granim({
-      element: '#granim-canvas',
-      name: 'granim',
-      opacity: [1, 1],
-      states: {
-        "default-state": {
-          gradients: [
-            ['#020100', '#2F0A28'],
-            ['#00141D', '#272932']
-          ]
-        }
-      }
-    });
-  </script>
+        <!-- Scroll Reveal -->
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script>
+            ScrollReveal({
+                reset: false,
+                scale: 0.95,
+                duration: 1000,
+            });
 
-  <!-- Scroll Reveal -->
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <script>
-    ScrollReveal({
-      reset: false,
-      scale: 0.95,
-      duration: 1000,
-    });
+            function remove_pageloader() {
+                document
+                    .getElementById("pageloader")
+                    .classList.remove("is-active");
+            }
+        </script>
 
-    function remove_pageloader() {
-      document.getElementById("pageloader").classList.remove("is-active");
-    }
-  </script>
+        <!-- Needed for Bulma -->
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, height=device-height"
+        />
+    </head>
 
-  <!-- Needed for Bulma -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, height=device-height" />
-</head>
+    <div class="pageloader is-active is-fullheight" id="pageloader"></div>
 
-<div class="pageloader is-active is-fullheight" id="pageloader"></div>
+    <body class="dark" onload="remove_pageloader()">
+        <section class="is-fullheight section">
+            <div class="vcentre">
+                <div class="container">
+                    <div class="columns">
+                        <div class="column is-one-quarter">
+                            <!--no subtitle-->
+                        </div>
+                        <div class="column">
+                            <div class="h1 reveal">
+                                welcome<span class="accent">...</span>
+                            </div>
+                        </div>
+                    </div>
 
-<body class="dark" onload="remove_pageloader()">
-  <section class="is-fullheight section">
-    <div class=vcentre>
-      <div class="container">
-        <div class="columns">
-          <div class="column is-one-quarter">
-            <!--no subtitle-->
-          </div>
-          <div class="column">
-            <div class="h1 reveal">
-              welcome<span class="accent">...</span>
+                    <div class="columns">
+                        <div
+                            class="column has-text-right is-one-quarter is-hidden-mobile"
+                        >
+                            <p class="ghost reveal">callum morrison</p>
+                        </div>
+                        <div class="column is-hidden-tablet">
+                            <p class="ghost reveal">callum morrison</p>
+                        </div>
+                        <div class="column">
+                            <p class="points reveal">
+                                I'm a
+                                <b>design engineer</b>.
+                            </p>
+                            <p class="points reveal">
+                                I have an MEng (Hons) in
+                                <b>Integrated Design Engineering</b> from the
+                                University of Bath (1st Class).
+                            </p>
+                            <p class="points reveal">
+                                I made a <b>(multi award winning)</b> weed
+                                detection system to reduce pesticide usage.
+                            </p>
+                            <p class="points reveal">
+                                I wrote the software for a printer capable of
+                                printing on
+                                <b>cylindrical surfaces</b>.
+                            </p>
+                            <p class="points reveal">
+                                I create graphics and photorealistic renders for
+                                global businesses.
+                            </p>
+                            <p class="points reveal">
+                                I'm fluent in English, and proficient in
+                                <b
+                                    >Python, JavaScript, Bash, C++, HTML, CSS,
+                                    and SQL</b
+                                >.
+                            </p>
+                            <p class="points reveal">
+                                In my spare time I like to repair old cars, and
+                                occasionally go on crazy adventures.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-
-        <div class="columns">
-          <div class="column has-text-right is-one-quarter is-hidden-mobile">
-            <p class="ghost reveal">callum morrison</p>
-          </div>
-          <div class="column is-hidden-tablet">
-            <p class="ghost reveal">callum morrison</p>
-          </div>
-          <div class="column">
-            <p class="points reveal">
-              I'm a
-              <b>design engineer</b>.
-            </p>
-            <p class="points reveal">
-              I have an MEng (Hons) in <b>Integrated Design
-                Engineering</b> from the University of Bath (1st Class).
-            </p>
-            <p class="points reveal">
-              I made an <b>(award winning)</b> weed detection system to reduce
-              pesticide usage.
-            </p>
-            <p class="points reveal">
-              I wrote the software for a printer capable of printing on
-              <b>cylindrical surfaces</b>.
-            </p>
-            <p class="points reveal">
-              I create graphics and photorealistic renders for global
-              businesses.
-            </p>
-            <p class="points reveal">
-              I'm fluent in English, and proficient in
-              <b>Python, MATLAB, Bash, JavaScript, HTML, CSS, and SQL</b>.
-            </p>
-            <p class="points reveal">
-              In my spare time I like to repair old cars, and occasionally go
-              on crazy adventures.
-            </p>
-          </div>
-        </div>
-      </div>
-
-  </section>
-  <div class="is-hidden-touch has-text-centered pop-up-element">
-    <p class="heading reveal">scroll <i class="fas fa-angle-down"></i></p>
-  </div>
-  </div>
-
-  <div class="break"></div>
-
-  <section class="section">
-    <div class="container">
-      <div class="columns">
-        <div class="column is-one-quarter">
-        </div>
-        <div class="column">
-          <div class="h1">portfolio<span class="accent">:</span></div>
-        </div>
-      </div>
-
-      <div class="columns">
-        <div class="column has-text-right is-one-quarter is-hidden-mobile">
-          <p class="ghost">2021</p>
-          <div style="position: sticky; top: 3rem;">
-            <img class="logo is-pulled-right" src="media/sprayai/logo.png" />
-            <div class="columns is-pulled-right">
-              <div class="column">
-                <img class="image is-64x64" src="media/sprayai/Crown Europe Invert.svg" \>
-              </div>
-              <div class="column">
-                <img class="image is-64x64" src="media/sprayai/HMGCC Invert.svg" \>
-              </div>
+            <div class="is-hidden-touch has-text-centered pop-up-element">
+                <p class="heading reveal">
+                    scroll <i class="fas fa-angle-down"></i>
+                </p>
             </div>
-          </div>
-        </div>
-        <div class="column is-hidden-tablet">
-          <p class="ghost">2021</p>
-          <img class="logo-mobile" src="media/sprayai/logo.png" />
-          <div class="columns is-mobile">
-            <div class="column is-narrow">
-              <img class="image is-64x64" src="media/sprayai/Crown Europe Invert.svg" \>
+        </section>
+
+        <div class="break"></div>
+
+        <section class="section">
+            <div class="container">
+                <div class="columns">
+                    <div class="column is-one-quarter"></div>
+                    <div class="column">
+                        <div class="h1">
+                            portfolio<span class="accent">:</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="columns">
+                    <div
+                        class="column has-text-right is-one-quarter is-hidden-mobile"
+                    >
+                        <p class="ghost">2021</p>
+                        <div style="position: sticky; top: 3rem">
+                            <img
+                                class="logo is-pulled-right"
+                                src="media/sprayai/logo.png"
+                            />
+                            <div class="columns is-pulled-right">
+                                <div class="column">
+                                    <img
+                                        class="image is-64x64"
+                                        src="media/sprayai/Crown Europe Invert.svg"
+                                        \
+                                    />
+                                </div>
+                                <div class="column">
+                                    <img
+                                        class="image is-64x64"
+                                        src="media/sprayai/HMGCC Invert.svg"
+                                        \
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-hidden-tablet">
+                        <p class="ghost">2021</p>
+                        <img class="logo-mobile" src="media/sprayai/logo.png" />
+                        <div class="columns is-mobile">
+                            <div class="column is-narrow">
+                                <img
+                                    class="image is-64x64"
+                                    src="media/sprayai/Crown Europe Invert.svg"
+                                    \
+                                />
+                            </div>
+                            <div class="column is-narrow">
+                                <img
+                                    class="image is-64x64"
+                                    src="media/sprayai/HMGCC Invert.svg"
+                                    \
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <p style="line-height: 2rem">
+                            <b
+                                >SPRAYai - autonomous agricultural spray
+                                system</b
+                            >
+                        </p>
+                        <br />
+                        <h3 class="heading">Why</h3>
+                        <p>
+                            Pesticide use is a fundamental aspect of modern
+                            farming. The UK alone applies ~17,000 tonnes of
+                            pesticide every year. Reduction of pesticide usage
+                            can provide numerous economic, social, and
+                            environmental improvements.
+                        </p>
+                        <br />
+                        <br />
+                        <h3 class="heading">What</h3>
+                        <p>
+                            I developed a system capable of recognising weeds
+                            through custom neural network computer vision
+                            system. The positions of each weed are then fed to a
+                            mechanical 'spray box', which actuates a spray
+                            nozzle to target weeds individually.
+                        </p>
+                        <br />
+                        <br />
+                        <img src="media/sprayai/poster.jpg" />
+                        <p class="ghost">
+                            A poster demonstrating use of the SPRAYai system.
+                        </p>
+                        <br />
+                        <p>
+                            I developed the mechanical and electrical system
+                            (including a custom multi-layer PCB), trained a YOLO
+                            neural network on a custom synthetic dataset, and
+                            designed and implemented a fully functional user
+                            interface built on web technologies.
+                        </p>
+                        <br />
+                        <br />
+                        <img src="media/sprayai/mechanism.jpg" />
+                        <p class="ghost">
+                            The mechanism capable of actuating a standard
+                            agricultural spray nozzle.
+                        </p>
+                        <br />
+                        <img src="media/sprayai/ui.jpg" />
+                        <p class="ghost">
+                            A fully functional user interface was developed to
+                            allow the farmer to interact with the system.
+                        </p>
+                        <br />
+                    </div>
+                </div>
             </div>
-            <div class="column is-narrow">
-              <img class="image is-64x64" src="media/sprayai/HMGCC Invert.svg" \>
+        </section>
+
+        <section class="reveal">
+            <a
+                href="https://www.youtube.com/watch?v=bLEyRONMQPY"
+                target="_blank"
+                class="video-overlay-link"
+            ></a>
+            <div class="video-overlay-text has-text-centered vcentre">
+                <p>Watch the full video on YouTube</p>
             </div>
-          </div>
-        </div>
-        <div class="column">
-          <p style="line-height: 2rem;"><b>SPRAYai - autonomous
-              agricultural spray system</b></p>
-          <br>
-          <h3 class="heading">Why</h3>
-          <p>
-            Pesticide use is a fundamental aspect of modern farming. The UK
-            alone applies ~17,000 tonnes of pesticide every year. Reduction
-            of pesticide usage can provide numerous economic, social, and
-            environmental improvements.</p>
-          <br>
-          <br>
-          <h3 class="heading">What</h3>
-          <p>
-            I developed a system capable of recognising weeds through custom
-            neural network computer vision system. The positions of
-            each weed are then fed to a mechanical 'spray box', which
-            actuates a spray nozzle to target weeds individually.</p>
-          <br>
-          <br>
-          <img src="media/sprayai/poster.jpg">
-          <p class="ghost">
-            A poster demonstrating use of the SPRAYai system.
-          </p>
-          <br>
-          <p>
-            I developed the mechanical and electrical system (including a
-            custom multi-layer PCB), trained a YOLO neural network
-            on a custom synthetic dataset, and designed and implemented a
-            fully functional user interface built on web technologies.
-          </p>
-          <br>
-          <br>
-          <img src="media/sprayai/mechanism.jpg">
-          <p class="ghost">
-            The mechanism capable of actuating a standard agricultural spray
-            nozzle.
-          </p>
-          <br>
-          <img src="media/sprayai/ui.jpg">
-          <p class="ghost">
-            A fully functional user interface was developed to allow the
-            farmer to interact with the system.
-          </p>
-          <br>
-        </div>
-      </div>
-    </div>
-
-    </div>
-  </section>
-
-
-  <section class="reveal">
-    <a href="https://www.youtube.com/watch?v=bLEyRONMQPY" target="_blank" class="video-overlay-link"></a>
-    <div class="video-overlay-text has-text-centered vcentre">
-      <p>Watch the full video on YouTube</p>
-    </div>
-    <div class="video-overlay">
-    </div>
-    <div class="video-bg">
-      <video loop autoplay muted poster="media/sprayai/video-thumbnail.jpg">
-        <source src="media/sprayai/video.mp4" type="video/mp4">
-      </video>
-    </div>
-  </section>
-
-  <div class="break"></div>
-
-  <section class="section">
-    <div class="container">
-      <div class="columns">
-        <div class="column has-text-right is-one-quarter is-hidden-mobile">
-          <p class="ghost ">2020</p>
-          <img class="logo  is-pulled-right" src="media/rotaprint/logo.png" />
-        </div>
-        <div class="column is-hidden-tablet">
-          <p class="ghost ">2020</p>
-          <img class="logo " src="media/rotaprint/logo.png" />
-        </div>
-        <div class="column">
-          <p style="line-height: 2rem;"><b>rotaprint - Rapid
-              Prototyping Printer for Cylindrical Components</b></p>
-          <br>
-          <h3 class="heading ">Why</h3>
-          <p>
-            The client needed to apply graphics to cylindrical drums for
-            user trials. The process is very labour intensive, but the scale
-            is too small for commercial rotary printers.</p>
-          <br>
-          <br>
-          <h3 class="heading ">What</h3>
-          <p>
-            Working in a team of six, I helped develop a concept for a rotary
-            prototyping printer, capable of batch production and multi-colour graphics.</p>
-          <br>
-          <img src="media/rotaprint/machine.jpg">
-          <p class="ghost ">
-            A mockup of the final printer, connected to the rotaprint user
-            interface running on a laptop.
-          </p>
-          <br>
-          <br>
-          <p>
-            I developed software capable of projecting a 2D graphic onto a 3D
-            sphere, which could then be loaded into the printer UI by a user.
-            Persistent settings were managed with a relational database, and
-            real-time print stats were relayed over WebSocket.
-          </p>
-          <br>
-          <br>
-          <img src="media/rotaprint/ui.jpg">
-          <p class="ghost">
-            Screenshots of the rotaprint user interface.
-          </p>
-          <br>
-          <div class="columns">
-            <div class="column">
-              <img src="media/rotaprint/motion1.jpg">
+            <div class="video-overlay"></div>
+            <div class="video-bg">
+                <video
+                    loop
+                    autoplay
+                    muted
+                    poster="media/sprayai/video-thumbnail.jpg"
+                >
+                    <source src="media/sprayai/video.mp4" type="video/mp4" />
+                </video>
             </div>
-            <div class="column">
-              <img src="media/rotaprint/motion2.jpg">
+        </section>
+
+        <div class="break"></div>
+
+        <section class="section">
+            <div class="container">
+                <div class="columns">
+                    <div
+                        class="column has-text-right is-one-quarter is-hidden-mobile"
+                    >
+                        <p class="ghost">2020</p>
+                        <img
+                            class="logo is-pulled-right"
+                            src="media/rotaprint/logo.png"
+                        />
+                    </div>
+                    <div class="column is-hidden-tablet">
+                        <p class="ghost">2020</p>
+                        <img class="logo" src="media/rotaprint/logo.png" />
+                    </div>
+                    <div class="column">
+                        <p style="line-height: 2rem">
+                            <b
+                                >rotaprint - Rapid Prototyping Printer for
+                                Cylindrical Components</b
+                            >
+                        </p>
+                        <br />
+                        <h3 class="heading">Why</h3>
+                        <p>
+                            The client needed to apply graphics to cylindrical
+                            drums for user trials. The process is very labour
+                            intensive, but the scale is too small for commercial
+                            rotary printers.
+                        </p>
+                        <br />
+                        <br />
+                        <h3 class="heading">What</h3>
+                        <p>
+                            Working in a team of six, I helped develop a concept
+                            for a rotary prototyping printer, capable of batch
+                            production and multi-colour graphics.
+                        </p>
+                        <br />
+                        <img src="media/rotaprint/machine.jpg" />
+                        <p class="ghost">
+                            A mockup of the final printer, connected to the
+                            rotaprint user interface running on a laptop.
+                        </p>
+                        <br />
+                        <br />
+                        <p>
+                            I developed software capable of projecting a 2D
+                            graphic onto a 3D sphere, which could then be loaded
+                            into the printer UI by a user. Persistent settings
+                            were managed with a relational database, and
+                            real-time print stats were relayed over WebSocket.
+                        </p>
+                        <br />
+                        <br />
+                        <img src="media/rotaprint/ui.jpg" />
+                        <p class="ghost">
+                            Screenshots of the rotaprint user interface.
+                        </p>
+                        <br />
+                        <div class="columns">
+                            <div class="column">
+                                <img src="media/rotaprint/motion1.jpg" />
+                            </div>
+                            <div class="column">
+                                <img src="media/rotaprint/motion2.jpg" />
+                            </div>
+                            <div class="column">
+                                <img src="media/rotaprint/motion3.jpg" />
+                            </div>
+                        </div>
+                        <p class="ghost">
+                            Renders showcasing the internal mechanism of the
+                            rotaprint machine.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="column">
-              <img src="media/rotaprint/motion3.jpg">
+        </section>
+
+        <div class="break"></div>
+
+        <section class="section">
+            <div class="container">
+                <div class="columns">
+                    <div
+                        class="column has-text-right is-one-quarter is-hidden-mobile"
+                    >
+                        <p class="ghost">2020</p>
+                        <img
+                            class="logo is-pulled-right"
+                            src="media/ultrasonics/logo.svg"
+                        />
+                    </div>
+                    <div class="column is-hidden-tablet">
+                        <p class="ghost">2020</p>
+                        <img class="logo" src="media/ultrasonics/logo.svg" />
+                    </div>
+                    <div class="column">
+                        <p style="line-height: 2rem">
+                            <b
+                                >ultrasonics - Synchronise Music Playlists
+                                Between Streaming Services</b
+                            >
+                        </p>
+                        <br />
+                        <h3 class="heading">Why</h3>
+                        <p>
+                            I like listening to music, but I tend to switch
+                            between different services, including Spotify, Plex,
+                            and my local offline library. This causes issues
+                            when I have dozens of playlists spread across each
+                            platform.
+                        </p>
+                        <br />
+                        <br />
+                        <h3 class="heading">What</h3>
+                        <p>
+                            I wrote a server application capable of
+                            synchronising music playlists between a range of
+                            supported music services.
+                        </p>
+                        <br />
+                        <img src="media/ultrasonics/ui-1.jpg" />
+                        <p class="ghost">
+                            The ultrasonics homescreen, with multiple
+                            user-creatable 'applets' for syncing playlists.
+                        </p>
+                        <br />
+                        <br />
+                        <p>
+                            The application is built on the concept of 'plugins'
+                            and 'applets'. Plugins can be dragged-and-dropped in
+                            to extend ultrasonics functionality (for example to
+                            add additional streaming service support).
+                        </p>
+                        <br />
+                        <br />
+                        <img src="media/ultrasonics/ui-2.jpg" />
+                        <p class="ghost">An applet during creation.</p>
+                        <br />
+                        <br />
+                        <p>
+                            Applets allow the user to build their own 'recipe'
+                            for syncing; e.g. they could take one playlist from
+                            Deezer, three playlists from Spotify, mix them using
+                            a recommendation algorithm, then save them all to
+                            Plex.
+                        </p>
+                        <br />
+                        <p>
+                            <a
+                                href="https://github.com/XDGFX/ultrasonics"
+                                target="_blank"
+                                >It's open-source on GitHub.</a
+                            >
+                        </p>
+                        <br />
+                    </div>
+                </div>
             </div>
-          </div>
-          <p class="ghost">
-            Renders showcasing the internal mechanism of the rotaprint machine.
-          </p>
-        </div>
-      </div>
+        </section>
 
-    </div>
-  </section>
+        <div class="break"></div>
 
+        <section class="section">
+            <div class="container">
+                <div class="columns">
+                    <div class="column is-one-quarter"></div>
+                    <div class="column">
+                        <div class="h1">
+                            software skills<span class="accent">:</span>
+                        </div>
+                    </div>
+                </div>
 
-  <div class="break"></div>
+                <div class="columns">
+                    <div class="column is-one-quarter"></div>
+                    <div class="column">
+                        <ul>
+                            <li>
+                                <p><b>Graphics</b></p>
+                            </li>
+                            <li>
+                                <p>Adobe Photoshop</p>
+                            </li>
+                            <li>
+                                <p>Adobe Illustrator</p>
+                            </li>
+                            <li>
+                                <p>Adobe InDesign</p>
+                            </li>
+                            <li>
+                                <p>Adobe After Effects</p>
+                            </li>
+                            <li>
+                                <p>Adobe Premiere Pro</p>
+                            </li>
+                            <li>
+                                <p>Adobe Audition</p>
+                            </li>
+                            <li>
+                                <p>Adobe XD</p>
+                            </li>
+                            <li>
+                                <p>Blender</p>
+                            </li>
+                            <li>
+                                <p>KeyShot</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <ul>
+                            <li>
+                                <p><b>CAD</b></p>
+                            </li>
+                            <li>
+                                <p>Autodesk Fusion</p>
+                            </li>
+                            <li>
+                                <p>Siemens NX</p>
+                            </li>
+                            <li>
+                                <p>Engineering Drawings</p>
+                            </li>
+                            <li>
+                                <p>FEA</p>
+                            </li>
+                            <li>
+                                <p>Autodesk Eagle</p>
+                            </li>
+                            <li>
+                                <p>Simulink</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <ul>
+                            <li>
+                                <p><b>Code</b></p>
+                            </li>
+                            <li>
+                                <p>Python / JavaScript / C++</p>
+                            </li>
+                            <li>
+                                <p>Node.js / Electron</p>
+                            </li>
+                            <li>
+                                <p>Flask</p>
+                            </li>
+                            <li>
+                                <p>Vue</p>
+                            </li>
+                            <li>
+                                <p>Robot Operating System (ROS)</p>
+                            </li>
+                            <li>
+                                <p>Redis / SQLite</p>
+                            </li>
+                            <li>
+                                <p>Socket.io</p>
+                            </li>
+                            <li>
+                                <p>Traefik / NGINX / Apache</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="columns">
-        <div class="column has-text-right is-one-quarter is-hidden-mobile">
-          <p class="ghost">2020</p>
-          <img class="logo  is-pulled-right" src="media/ultrasonics/logo.svg" />
-        </div>
-        <div class="column is-hidden-tablet">
-          <p class="ghost">2020</p>
-          <img class="logo" src="media/ultrasonics/logo.svg" />
-        </div>
-        <div class="column">
-          <p style="line-height: 2rem;"><b>ultrasonics - Synchronise Music
-              Playlists Between Streaming Services</b></p>
-          <br>
-          <h3 class="heading ">Why</h3>
-          <p>
-            I like listening to music, but I tend to switch between different
-            services, including Spotify, Plex, and my local offline library.
-            This causes issues when I have dozens of playlists spread across
-            each platform.</p>
-          <br>
-          <br>
-          <h3 class="heading ">What</h3>
-          <p>
-            I wrote a server application capable of synchronising music
-            playlists between a range of supported music services.</p>
-          <br>
-          <img src="media/ultrasonics/ui-1.jpg">
-          <p class="ghost ">
-            The ultrasonics homescreen, with multiple user-creatable 'applets'
-            for syncing playlists.
-          </p>
-          <br>
-          <br>
-          <p>
-            The application is built on the concept of 'plugins' and 'applets'.
-            Plugins can be dragged-and-dropped in to extend ultrasonics
-            functionality (for example to add additional streaming service
-            support).
-          </p>
-          <br>
-          <br>
-          <img src="media/ultrasonics/ui-2.jpg">
-          <p class="ghost">
-            An applet during creation.
-          </p>
-          <br>
-          <br>
-          <p>
-            Applets allow the user to build their own 'recipe' for syncing; e.g.
-            they could take one playlist from Deezer, three playlists from
-            Spotify, mix them using a recommendation algorithm, then save them
-            all to Plex.
-          </p>
-          <br>
-          <p>
-            <a href="https://github.com/XDGFX/ultrasonics" target="_blank">It's open-source on GitHub.</a>
-          </p>
-          <br>
+        <div class="break"></div>
 
-        </div>
-      </div>
+        <section class="section">
+            <div class="container">
+                <div class="columns">
+                    <div class="column is-one-quarter"></div>
+                    <div class="column">
+                        <div class="h1">other<span class="accent">:</span></div>
+                    </div>
+                </div>
 
-    </div>
-  </section>
+                <div class="columns">
+                    <div class="column is-one-quarter"></div>
+                    <div class="column">
+                        <p>
+                            <a
+                                href="https://www.linkedin.com/in/callummorrison/"
+                                target="_blank"
+                            >
+                                <i class="fab fa-linkedin"></i>
+                                LinkedIn
+                            </a>
+                        </p>
+                        <p>
+                            <a href="https://github.com/XDGFX/" target="_blank">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                        </p>
+                        <p>
+                            <a
+                                href="https://www.youtube.com/channel/UCbYJMsWBpxTdvWYWy9509ig"
+                                target="_blank"
+                            >
+                                <i class="fab fa-youtube"></i>
+                                YouTube
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <div class="break"></div>
+        <div class="break"></div>
+        <div class="break"></div>
 
-  <section class="section">
-    <div class="container">
-      <div class="columns">
-        <div class="column is-one-quarter">
-        </div>
-        <div class="column">
-          <div class="h1">software skills<span class="accent">:</span></div>
-        </div>
-      </div>
-
-      <div class="columns">
-        <div class="column is-one-quarter"></div>
-        <div class="column">
-          <ul>
-            <li>
-              <p><b>Graphics</b></p>
-            </li>
-            <li>
-              <p>Adobe Photoshop</p>
-            </li>
-            <li>
-              <p>Adobe Illustrator</p>
-            </li>
-            <li>
-              <p>Adobe InDesign</p>
-            </li>
-            <li>
-              <p>Adobe After Effects</p>
-            </li>
-            <li>
-              <p>Adobe Premiere Pro</p>
-            </li>
-            <li>
-              <p>Adobe Audition</p>
-            </li>
-            <li>
-              <p>Adobe XD</p>
-            </li>
-            <li>
-              <p>Blender</p>
-            </li>
-            <li>
-              <p>KeyShot</p>
-            </li>
-          </ul>
-        </div>
-        <div class="column">
-          <ul>
-            <li>
-              <p><b>CAD</b></p>
-            </li>
-            <li>
-              <p>Autodesk Fusion</p>
-            </li>
-            <li>
-              <p>Siemens NX</p>
-            </li>
-            <li>
-              <p>Engineering Drawings</p>
-            </li>
-            <li>
-              <p>FEA</p>
-            </li>
-            <li>
-              <p>Autodesk Eagle</p>
-            </li>
-            <li>
-              <p>Simulink</p>
-            </li>
-          </ul>
-        </div>
-        <div class="column">
-          <ul>
-            <li>
-              <p><b>Code</b></p>
-            </li>
-            <li>
-              <p>OOP</p>
-            </li>
-            <li>
-              <p>Python Flask</p>
-            </li>
-            <li>
-              <p>Robot Operating System (ROS)</p>
-            </li>
-            <li>
-              <p>Socket.io</p>
-            </li>
-            <li>
-              <p>Redis</p>
-            </li>
-            <li>
-              <p>SQLite</p>
-            </li>
-            <li>
-              <p>Bulma</p>
-            </li>
-            <li>
-              <p>Traefik / NGINX / Apache</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="break"></div>
-
-  <section class="section">
-    <div class="container">
-      <div class="columns">
-        <div class="column is-one-quarter">
-        </div>
-        <div class="column">
-          <div class="h1">other<span class="accent">:</span></div>
-        </div>
-      </div>
-
-      <div class="columns">
-        <div class="column is-one-quarter"></div>
-        <div class="column">
-          <p>
-            <a href="https://www.linkedin.com/in/callummorrison/" target="_blank">
-              <i class="fab fa-linkedin"></i>
-              LinkedIn
-            </a>
-          </p>
-          <p>
-            <a href="https://github.com/XDGFX/" target="_blank">
-              <i class="fab fa-github"></i>
-              GitHub
-            </a>
-          </p>
-          <p>
-            <a href="https://www.youtube.com/channel/UCbYJMsWBpxTdvWYWy9509ig" target="_blank">
-              <i class="fab fa-youtube"></i>
-              YouTube
-            </a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="break"></div>
-  <div class="break"></div>
-
-  <script>
-    ScrollReveal().reveal(".reveal", {
-      interval: 300,
-      delay: 100,
-    });
-  </script>
-</body>
-
+        <script>
+            ScrollReveal().reveal(".reveal", {
+                interval: 300,
+                delay: 100,
+            });
+        </script>
+    </body>
 </html>
